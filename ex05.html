@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5</title>
+</head>
+<body onload="check()">
+<script>
+    function check() {
+        let word = prompt("Nhập từ cần tra");
+        let wordViet = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let wordEng = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let result = "";
+        for (let i = 0; i < wordViet.length; i++) {
+            if (wordViet[i] === word) {
+                result = "Dịch: " + wordEng[i];
+                break;
+            } else if (wordEng[i] === word) {
+                result = "Translate: " + wordViet[i];
+                break;
+            } else
+                result = "Nope";
+        }
+        document.write(result);
+    }
+</script>
+</body>
+</html>
